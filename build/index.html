@@ -5,15 +5,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/src/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Roboto+Slab&display=swap" rel="stylesheet">
     <title>Weather App</title>
 </head>
 
 <body>
-    <nav class="navbar">
-        <button id="search-btn">Search</button>
-        <input type="text" placeholder="Search city" id="search-field">
-
-    </nav>
+    <div class="container">
+        <div class="content-box">
+            <h1>Hi, Sunshine Girl Here!</h1>
+            <h3>Ask me how the weather is in...</h3>
+            <div class="search-container">
+                <input type="text" placeholder="Search city" id="search-field">
+                <button id="search-btn">Search</button>
+            </div>
+        </div>
+    </div>
     <script src="bundle.js"></script>
 </body>
 

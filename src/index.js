@@ -4,7 +4,7 @@ const defaultURL = `https://api.openweathermap.org/data/2.5/weather?q=vancouver&
 const baseURL = 'https://api.openweathermap.org/data/2.5/weather?q=';
 
 function appInit() {
-  UISetup();
+  UILogicSetup();
   getData(defaultURL);
 }
 
@@ -36,7 +36,7 @@ function processData(data) {
   };
 }
 
-function UISetup() {
+function UILogicSetup() {
   const btn = document.getElementById('search-btn');
   const input = document.getElementById('search-field');
   btn.addEventListener('click', () => {
