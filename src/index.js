@@ -132,6 +132,24 @@ function generateWeatherInfoPage(weatherData) {
   searchContainer.style.top = '50px';
   searchContainer.style.width = '70%';
 
+  const mediaQuery = window.matchMedia('(max-width: 767px)');
+
+  if (mediaQuery.matches) {
+    searchContainer.style.position = 'absolute';
+    searchContainer.style.top = '2px';
+    searchContainer.style.width = '80%';
+    searchContainer.style.display = 'flex';
+    searchContainer.style.alignItems = 'center';
+    searchBtn.style.height = '40px';
+    input.style.height = '40px';
+    input.style.fontSize = '16px';
+    maxText.style.fontSize = '26px';
+    minText.style.fontSize = '26px';
+    currentTmpText.style.fontSize = '42px';
+    cityNameText.style.fontSize = '32px';
+    description.style.fontSize = '32px';
+  }
+
   const container = document.querySelector('.container');
   container.appendChild(searchContainer);
 

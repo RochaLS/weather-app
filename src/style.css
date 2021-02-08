@@ -60,7 +60,7 @@
   height: 60px;
   width: 200px;
   border-radius: 10px;
-  border: none;
+  border: 2px solid white;
   background-color: #016fb7;
   color: white;
   font-weight: bold;
@@ -118,4 +118,50 @@
   height: 100px;
   margin-left: auto;
   margin-right: auto;
+}
+
+@media only screen and (max-width: 767px) {
+  /* phones */
+  .content-box {
+    display: block;
+    width: 80%;
+  }
+
+  .search-container {
+    display: block;
+  }
+
+  .content-box h1 {
+    font-size: 24px;
+  }
+
+  .content-box h3 {
+    font-size: 20px;
+  }
+
+  #search-field {
+    margin: 0;
+    height: 50px;
+    font-size: 20px;
+  }
+
+  .tmp-unit {
+    width: 50%;
+  }
+
+  .tmps-box {
+    display: block;
+  }
+
+  .name {
+    margin: 5px;
+  }
+
+  .tmp {
+    margin: 5px;
+  }
+
+  .max {
+    margin: 5px;
+  }
 }
