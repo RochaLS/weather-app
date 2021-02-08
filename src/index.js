@@ -32,7 +32,7 @@ function processData(data) {
   // eslint-disable-next-line radix
   const min = parseInt(data.main.temp_min);
   const weatherDescription = data.weather[0].description;
-  const iconURL = data;
+  const iconURL = `http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
 
   return {
     cityName,
@@ -40,6 +40,7 @@ function processData(data) {
     max,
     min,
     weatherDescription,
+    iconURL,
   };
 }
 
@@ -91,6 +92,10 @@ function generateWeatherInfoPage(weatherData) {
       ? `L:${weatherData.min}°C`
       : `L:${weatherData.min}°F`;
   minText.className = 'min';
+  const weatherIcon = document.createElement('div');
+  weatherIcon.className = 'icon';
+  weatherIcon.style.backgroundImage = `url(${weatherData.iconURL})`;
+  weatherIcon.style.backgroundSize = 'cover';
   const description = document.createElement('p');
   description.className = 'description';
   description.textContent =
@@ -109,7 +114,7 @@ function generateWeatherInfoPage(weatherData) {
   tmpsBox.appendChild(currentTmpText);
   tmpsBox.appendChild(minText);
 
-  const elements = [cityNameText, tmpsBox, description];
+  const elements = [cityNameText, tmpsBox, weatherIcon, description];
 
   elements.forEach((e) => {
     contentBox.appendChild(e);
