@@ -18,6 +18,11 @@
             <h3>Ask me how the weather is in...</h3>
             <div class="search-container">
                 <input type="text" placeholder="Search city" id="search-field">
+                <input list="tmp-unit" name="tmp-unit" class="tmp-unit" placeholder="Unit">
+                <datalist id="tmp-unit">
+                    <option value="°C">
+                    <option value="°F">
+                </datalist>
                 <button id="search-btn">Search</button>
             </div>
         </div>

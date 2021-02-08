@@ -19,25 +19,24 @@
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
   color: black;
-  border-radius: 20px;
-  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  background-color: white;
+  padding-bottom: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .content-box h1 {
   font-size: 64px;
   margin: 10px;
-  -webkit-text-fill-color: white; /* Will override color (regardless of order) */
-  -webkit-text-stroke-width: 1.3px;
-  -webkit-text-stroke-color: black;
+  color: #016fb7;
   font-weight: lighter;
 }
 
 .content-box h3 {
   font-size: 48px;
   margin: 10px;
-  -webkit-text-fill-color: white; /* Will override color (regardless of order) */
-  -webkit-text-stroke-width: 1.3px;
-  -webkit-text-stroke-color: black;
+  color: #016fb7;
   font-weight: lighter;
 }
 
@@ -49,23 +48,34 @@
   margin: 10px;
   height: 60px;
   text-align: center;
-  border-radius: 50px;
-  border: none;
+  border-radius: 10px;
   width: 100%;
   font-size: 22px;
   color: black;
+  border: 3px solid #34a5dd;
 }
 
 #search-btn {
   margin: 10px;
   height: 60px;
   width: 200px;
-  border-radius: 50px;
+  border-radius: 10px;
   border: none;
   background-color: #016fb7;
   color: white;
   font-weight: bold;
   font-size: 16px;
+}
+
+.tmp-unit {
+  margin: 10px;
+  height: 60px;
+  text-align: center;
+  border-radius: 10px;
+  color: black;
+  width: 20%;
+  font-size: 18px;
+  border: 3px solid #34a5dd;
 }
 
 .name {

@@ -1,8 +1,7 @@
 import apiKey from './keys';
-// import generateWeatherInfoBox from './view';
 
-// const defaultURL = `https://api.openweathermap.org/data/2.5/weather?q=vancouver&units=metric&appid=${apiKey.value}`;
 const baseURL = 'https://api.openweathermap.org/data/2.5/weather?q=';
+let units;
 
 function appInit() {
   UILogicSetup();
@@ -33,6 +32,7 @@ function processData(data) {
   // eslint-disable-next-line radix
   const min = parseInt(data.main.temp_min);
   const weatherDescription = data.weather[0].description;
+  const iconURL = data;
 
   return {
     cityName,
@@ -47,8 +47,12 @@ function UILogicSetup() {
   const btn = document.getElementById('search-btn');
   const input = document.getElementById('search-field');
   btn.addEventListener('click', () => {
+    units =
+      document.querySelector('.tmp-unit').value === '°F'
+        ? 'imperial'
+        : 'metric';
     getData(
-      `${baseURL}${input.value}&units=metric&appid=${apiKey.value}`,
+      `${baseURL}${input.value}&units=${units}&appid=${apiKey.value}`,
     );
     input.value = '';
   });
@@ -70,13 +74,22 @@ function generateWeatherInfoPage(weatherData) {
   cityNameText.textContent = weatherData.cityName;
   cityNameText.className = 'name';
   const currentTmpText = document.createElement('p');
-  currentTmpText.textContent = `${weatherData.tmp}°C`;
+  currentTmpText.textContent =
+    units === 'metric'
+      ? `${weatherData.tmp}°C`
+      : `${weatherData.tmp}°F`;
   currentTmpText.className = 'tmp';
   const maxText = document.createElement('p');
-  maxText.textContent = `H:${weatherData.max}°C`;
+  maxText.textContent =
+    units === 'metric'
+      ? `H:${weatherData.max}°C`
+      : `H:${weatherData.max}°F`;
   maxText.className = 'max';
   const minText = document.createElement('p');
-  minText.textContent = `L:${weatherData.min}°C`;
+  minText.textContent =
+    units === 'metric'
+      ? `L:${weatherData.min}°C`
+      : `L:${weatherData.min}°F`;
   minText.className = 'min';
   const description = document.createElement('p');
   description.className = 'description';
@@ -102,7 +115,7 @@ function generateWeatherInfoPage(weatherData) {
     contentBox.appendChild(e);
   });
 
-  contentBox.style.backgroundColor = 'rgba(255, 255, 255, 0.7)';
+  contentBox.style.backgroundColor = 'white';
 
   // Search Field positioning:
 
@@ -119,7 +132,7 @@ function generateWeatherInfoPage(weatherData) {
 
   searchBtn.addEventListener('click', () => {
     getData(
-      `${baseURL}${input.value}&units=metric&appid=${apiKey.value}`,
+      `${baseURL}${input.value}&units=${units}&appid=${apiKey.value}`,
     );
     container.removeChild(input);
   });
