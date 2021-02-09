@@ -83,14 +83,14 @@ function generateWeatherInfoPage(weatherData) {
   const maxText = document.createElement('p');
   maxText.textContent =
     units === 'metric'
-      ? `H:${weatherData.max}°C`
-      : `H:${weatherData.max}°F`;
+      ? `H: ${weatherData.max}°C`
+      : `H: ${weatherData.max}°F`;
   maxText.className = 'max';
   const minText = document.createElement('p');
   minText.textContent =
     units === 'metric'
-      ? `L:${weatherData.min}°C`
-      : `L:${weatherData.min}°F`;
+      ? `L: ${weatherData.min}°C`
+      : `L: ${weatherData.min}°F`;
   minText.className = 'min';
   const weatherIcon = document.createElement('div');
   weatherIcon.className = 'icon';
