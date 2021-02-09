@@ -1,0 +1,167 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  background-image: url(https://images.alphacoders.com/100/1006753.png);
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  align-items: center;
+  justify-content: center;
+}
+
+.content-box {
+  width: 65%;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  color: black;
+  border-radius: 10px;
+  background-color: white;
+  padding: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.content-box h1 {
+  font-size: 64px;
+  margin: 20px;
+  color: #016fb7;
+  font-weight: lighter;
+}
+
+.content-box h3 {
+  font-size: 48px;
+  margin: 20px;
+  color: #016fb7;
+  font-weight: lighter;
+}
+
+.search-container {
+  display: flex;
+}
+
+#search-field {
+  margin: 10px;
+  height: 60px;
+  text-align: center;
+  border-radius: 10px;
+  width: 100%;
+  font-size: 22px;
+  color: black;
+  border: 3px solid #34a5dd;
+}
+
+#search-btn {
+  margin: 10px;
+  height: 60px;
+  width: 200px;
+  border-radius: 10px;
+  border: 2px solid white;
+  background-color: #016fb7;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.tmp-unit {
+  margin: 10px;
+  height: 60px;
+  text-align: center;
+  border-radius: 10px;
+  color: black;
+  width: 20%;
+  font-size: 18px;
+  border: 3px solid #34a5dd;
+}
+
+.name {
+  font-size: 48px;
+  color: #0071c5;
+}
+
+.tmp {
+  font-size: 64px;
+  color: #0071c5;
+}
+
+.max {
+  font-size: 36px;
+  color: #34a5dd;
+}
+
+.min {
+  font-size: 36px;
+  color: #34a5dd;
+}
+
+.description {
+  font-size: 48px;
+  color: #0071c5;
+}
+
+.tmps-box {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.content-box p {
+  margin: 30px;
+}
+
+.icon {
+  width: 100px;
+  height: 100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media only screen and (max-width: 767px) {
+  /* phones */
+  .content-box {
+    display: block;
+    width: 80%;
+  }
+
+  .search-container {
+    display: block;
+  }
+
+  .content-box h1 {
+    font-size: 24px;
+  }
+
+  .content-box h3 {
+    font-size: 20px;
+  }
+
+  #search-field {
+    margin: 0;
+    height: 50px;
+    font-size: 20px;
+  }
+
+  .tmp-unit {
+    width: 50%;
+  }
+
+  .tmps-box {
+    display: block;
+  }
+
+  .name {
+    margin: 5px;
+  }
+
+  .tmp {
+    margin: 5px;
+  }
+
+  .max {
+    margin: 5px;
+  }
+}
