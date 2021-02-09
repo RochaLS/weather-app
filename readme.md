@@ -2,7 +2,7 @@
 
 ## Description
 
-In this project, I created a Weather Web App based on the Weathering with You anime movie. Users can search weather by city.
+In this project, I created a Weather Web App based on the "Weathering with You" anime movie. Users can search weather by city.
 
 ### Technologies used in this project
 
